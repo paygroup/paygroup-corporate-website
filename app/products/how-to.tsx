@@ -3,6 +3,7 @@ import { Typography } from '@/components/ui/typography';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { extra, data, user } from './data';
 
 export default function HowTo() {
   return (
@@ -57,43 +58,10 @@ export default function HowTo() {
           );
         })}
       </div>
+      <Typography center lg className='mt-20 text-primary'>
+        WHO CAN USE PAYGROUP?
+      </Typography>
+      <div className='grid grid-cols-1 gap-px mt-20 lg:grid-cols-3 md:grid-cols-2'></div>
     </section>
   );
 }
-const data = [
-  {
-    text: 'Download mobile app Create your account',
-    image: '/assets/images/product-page/1.png',
-  },
-  {
-    text: 'Search for available public campaigns',
-    image: '/assets/images/product-page/2.png',
-  },
-  {
-    text: 'Select a campaign you want to support OR Create your own paygroup ',
-    image: '/assets/images/product-page/3.png',
-  },
-];
-
-const extra = [
-  { image: '/assets/images/product-page/4.png' },
-  {
-    label: '04',
-    text: 'Make your donation pledge ',
-    caption:
-      '(indicate which amount and how frequently you will be paying towards the campaign or the paygroup).',
-  },
-  { image: '/assets/images/product-page/5.png' },
-  {
-    label: '05',
-    text: 'Receive reminders about your promise as deadline for payment approaches  ',
-    caption: '(or you can configure this yourself)  ',
-  },
-  { image: '/assets/images/product-page/6.png' },
-  {
-    label: '06',
-    text: 'Make a payment to support a cause ',
-    caption:
-      '(You can pay using Mobile Money or an International Debit or Credit card)  ',
-  },
-];
