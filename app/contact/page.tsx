@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Page() {
   return (
-    <section className='container grid grid-cols-1 md:grid-cols-2'>
+    <section className='container grid grid-cols-1 gap-5 md:grid-cols-2'>
       <Image
         src={`/assets/images/contact/girl.png`}
         alt=''
@@ -20,7 +20,7 @@ export default function Page() {
             <Image
               src={`/assets/images/contact/phone.png`}
               alt=''
-              className='object-contain w-12 aspect-square'
+              className='object-contain w-8 aspect-square'
               width={40}
               height={40}
             />
@@ -47,7 +47,7 @@ export default function Page() {
             <Image
               src={`/assets/images/contact/email.png`}
               alt=''
-              className='object-contain w-12 aspect-square'
+              className='object-contain w-8 aspect-square'
               width={40}
               height={40}
             />
@@ -64,7 +64,7 @@ export default function Page() {
           <Image
             src={`/assets/images/contact/location.png`}
             alt=''
-            className='object-contain w-12 aspect-square'
+            className='object-contain w-8 aspect-square'
             width={50}
             height={50}
           />
