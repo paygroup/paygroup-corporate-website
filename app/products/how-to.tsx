@@ -9,7 +9,7 @@ export default function HowTo() {
       <Typography center lg className='text-primary '>
         HOW TO USE PAYGROUP
       </Typography>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-[10%] pt-20'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-px md:gap-[10%] pt-20'>
         {data.map((_, idx) => (
           <motion.div
             viewport={{ once: true }}
@@ -28,7 +28,7 @@ export default function HowTo() {
           </motion.div>
         ))}
       </div>
-      <div className='grid grid-cols-2 gap-px mt-20 md:grid-cols-3'>
+      <div className='grid grid-cols-1 gap-px mt-20 lg:grid-cols-3 md:grid-cols-2'>
         {extra.map((_) => {
           if (_.image)
             return (
@@ -43,10 +43,11 @@ export default function HowTo() {
           return (
             <div
               key={_.label}
-              className='flex flex-col items-center justify-end px-10 pb-20 text-center'
+              className='flex flex-col items-center justify-center px-10 py-3 text-center text-white bg-primary'
             >
               <h1 className='text-2xl'>{_.label}</h1>
               <Typography sm>{_.text}</Typography>
+              <br />
               <Typography sm>{_.caption}</Typography>
             </div>
           );
