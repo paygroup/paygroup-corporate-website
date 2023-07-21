@@ -61,11 +61,17 @@ export default function HowTo() {
       <Typography center lg className='mt-20 text-primary'>
         WHO CAN USE PAYGROUP?
       </Typography>
-      <div className='grid grid-cols-1 gap-px mt-20 lg:grid-cols-3 md:grid-cols-2'>
+      <div className='grid grid-cols-1 mt-20 gap-x-10 gap-y-32 lg:grid-cols-3 md:grid-cols-2 justify-items-center'>
         {user.map((_, idx) => (
           <div key={_.text}>
-            <div className='relative rounded-full w-fit ring-4 ring-primary ring-offset-8'>
-              <div className='absolute w-[calc(50%+6px)] bg-red-200 rounded-tl-full -top-10 -left-5 aspect-square'></div>
+            <div className='relative text-black rounded-full w-fit ring-4 ring-primary ring-offset-8'>
+              <div className='absolute w-[calc(50%+8px)] rounded-tl-full -top-3 -left-3 bg-white aspect-square'>
+                <div className='absolute w-full h-full border-t border-l rounded-tl-full border-primary left-px top-px'></div>
+              </div>
+              <div className='absolute inset-x-0 flex flex-col items-center w-[60%] pt-32 mx-auto top-2/3 bg-gradient-to-b from-primary/60 to-transparent'>
+                <h1 className='text-5xl text-white/20 '>0{idx + 1}</h1>
+                <p className='w-[180%] text-center pb-20 pt-5'>{_.text}</p>
+              </div>
               <Image
                 src={_.image}
                 alt=''
