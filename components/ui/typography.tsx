@@ -3,11 +3,24 @@ import { HtmlHTMLAttributes, forwardRef } from 'react';
 
 interface TypographyProps extends HtmlHTMLAttributes<HTMLHeadingElement> {
   heading?: boolean;
+  lg?: boolean;
 }
 
 const Typography = forwardRef<HTMLHeadingElement, TypographyProps>(
-  ({ className, ...props }, ref) => {
-    return <h1 ref={ref} {...props} className={cn('text-xl', {}, className)} />;
+  ({ className, lg, heading, ...props }, ref) => {
+    return (
+      <h1
+        ref={ref}
+        {...props}
+        className={cn(
+          'md:text-xl   tracking-wide ',
+          {
+            'text-2xl md:text-3xl md:leading-[3rem] ': lg,
+          },
+          className
+        )}
+      />
+    );
   }
 );
 
