@@ -28,11 +28,28 @@ export default function HowTo() {
           </motion.div>
         ))}
       </div>
-      <div className='grid grid-cols-2 gap-px md:grid-cols-3'>
+      <div className='grid grid-cols-2 gap-px mt-20 md:grid-cols-3'>
         {extra.map((_) => {
           if (_.image)
-            return <Image src={_.image} alt='' width={200} height={100} />;
-          return <div />;
+            return (
+              <Image
+                src={_.image}
+                alt=''
+                className='object-cover w-full h-full'
+                width={200}
+                height={100}
+              />
+            );
+          return (
+            <div
+              key={_.label}
+              className='flex flex-col items-center justify-end px-10 pb-20 text-center'
+            >
+              <h1 className='text-2xl'>{_.label}</h1>
+              <Typography sm>{_.text}</Typography>
+              <Typography sm>{_.caption}</Typography>
+            </div>
+          );
         })}
       </div>
     </section>
@@ -54,20 +71,20 @@ const data = [
 ];
 
 const extra = [
-  { image: '/public/assets/images/product-page/4.png' },
+  { image: '/assets/images/product-page/4.png' },
   {
     label: '04',
     text: 'Make your donation pledge ',
     caption:
       '(indicate which amount and how frequently you will be paying towards the campaign or the paygroup).',
   },
-  { image: '/public/assets/images/product-page/5.png' },
+  { image: '/assets/images/product-page/5.png' },
   {
     label: '05',
     text: 'Receive reminders about your promise as deadline for payment approaches  ',
     caption: '(or you can configure this yourself)  ',
   },
-  { image: '/public/assets/images/product-page/6.png' },
+  { image: '/assets/images/product-page/6.png' },
   {
     label: '06',
     text: 'Make a payment to support a cause ',
