@@ -2,6 +2,7 @@ import { Typography } from '@/components/ui/typography';
 import { data } from './data';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import Team from './team';
 
 export default function Page() {
   return (
@@ -22,11 +23,10 @@ export default function Page() {
           <div
             key={_.label}
             className={cn(
-              'grid items-center grid-cols-1 md:pr-10 justify-items-center md:grid-cols-2',
-              { 'md:pl-10': idx }
+              'grid items-center grid-cols-1 justify-items-center md:grid-cols-2'
             )}
           >
-            <div>
+            <div className={cn('md:pr-10', { 'md:pl-10': idx })}>
               <Image src={_.icon} alt='' width={40} height={40} />
               <Typography
                 lg
@@ -50,6 +50,7 @@ export default function Page() {
           </div>
         ))}
       </div>
+      <Team />
     </section>
   );
 }
