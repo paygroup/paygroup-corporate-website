@@ -37,15 +37,15 @@ export const extra = [
 ];
 export const user = [
   {
-    image: '/public/assets/images/product-page/7.png',
+    image: '/assets/images/product-page/7.png',
     text: 'Families, social groups of Africans on the continent and in the Diaspora who depend on mutual solidarity to resolve challenges, or want to get financially organized.',
   },
   {
-    image: '/public/assets/images/product-page/8.png',
+    image: '/assets/images/product-page/8.png',
     text: 'Small traders who engage in money pool arrangements/activities.',
   },
   {
-    image: '/public/assets/images/product-page/9.png',
+    image: '/assets/images/product-page/9.png',
     text: 'Legal entities such as NGOs, non-profits, churches, political groups, sports and cultural groups that rely on contributions from members and donations from sympathizers to operate.',
   },
 ];
