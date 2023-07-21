@@ -64,8 +64,15 @@ export default function HowTo() {
       <div className='grid grid-cols-1 gap-px mt-20 lg:grid-cols-3 md:grid-cols-2'>
         {user.map((_, idx) => (
           <div key={_.text}>
-            <div className='rounded-full w-fit ring-4 ring-primary ring-offset-8'>
-              <Image src={_.image} alt='' width={300} height={300} />
+            <div className='relative rounded-full w-fit ring-4 ring-primary ring-offset-8'>
+              <div className='absolute w-[calc(50%+6px)] bg-red-200 rounded-tl-full -top-10 -left-5 aspect-square'></div>
+              <Image
+                src={_.image}
+                alt=''
+                className='relative z-10'
+                width={300}
+                height={300}
+              />
             </div>
           </div>
         ))}
