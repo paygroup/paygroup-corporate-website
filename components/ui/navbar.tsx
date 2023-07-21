@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <section>
-      <nav className='container flex items-center justify-between'>
+      <nav className='container flex items-center justify-between py-3'>
         <Brand />
         <NavContent />
         {!isMenuOpen ? (
