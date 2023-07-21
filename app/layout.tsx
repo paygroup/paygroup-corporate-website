@@ -1,11 +1,10 @@
-
 import './globals.css';
-import { Poppins } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
-const poppins = Poppins({
+const inter = Inter({
   subsets: ['latin'],
   weight: ['300', '100', '400', '200', '500', '600', '700', '800', '900'],
-  variable: '--poppins',
+  variable: '--inter',
 });
 
 export const metadata = {
@@ -19,9 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${poppins.className} ${poppins.variable}`}>
-        {children}
-      </body>
+      <body className={`${inter.className} ${inter.variable}`}>{children}</body>
     </html>
   );
 }

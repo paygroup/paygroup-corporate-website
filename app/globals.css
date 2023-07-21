@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,12 +5,12 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 215 33% 26%;
+    --foreground: 0 0% 38%;
 
     --muted: var(--background);
     --muted-foreground: 215 33% 26%;
 
-    --primary: 205 100% 32%;
+    --primary: 256 54% 51%;
     --primary-foreground: var(--foreground);
 
     --secondary: 205 100% 44%;
