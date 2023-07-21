@@ -28,6 +28,13 @@ export default function HowTo() {
           </motion.div>
         ))}
       </div>
+      <div className='grid grid-cols-2 gap-px md:grid-cols-3'>
+        {extra.map((_) => {
+          if (_.image)
+            return <Image src={_.image} alt='' width={200} height={100} />;
+          return <div />;
+        })}
+      </div>
     </section>
   );
 }
@@ -43,5 +50,28 @@ const data = [
   {
     text: 'Select a campaign you want to support OR Create your own paygroup ',
     image: '/assets/images/product-page/3.png',
+  },
+];
+
+const extra = [
+  { image: '/public/assets/images/product-page/4.png' },
+  {
+    label: '04',
+    text: 'Make your donation pledge ',
+    caption:
+      '(indicate which amount and how frequently you will be paying towards the campaign or the paygroup).',
+  },
+  { image: '/public/assets/images/product-page/5.png' },
+  {
+    label: '05',
+    text: 'Receive reminders about your promise as deadline for payment approaches  ',
+    caption: '(or you can configure this yourself)  ',
+  },
+  { image: '/public/assets/images/product-page/6.png' },
+  {
+    label: '06',
+    text: 'Make a payment to support a cause ',
+    caption:
+      '(You can pay using Mobile Money or an International Debit or Credit card)  ',
   },
 ];
