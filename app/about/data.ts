@@ -43,3 +43,18 @@ export const persons = [
     ],
   },
 ];
+
+export const culture = [
+  {
+    label: 'Transparency',
+    desc: 'No long-term relationship can be sustained without cementing and strengthening trust with our customers and partners.',
+  },
+  {
+    label: 'Efficiency',
+    desc: 'We make the culture of excellence and the quality of product and service offered our corporate credo. This allows us to create a framework for the emergence of talent and the development of original solutions to sometimes thorny problems.',
+  },
+  {
+    label: 'Client orientation ',
+    desc: 'The search for the continual satisfaction of our customers and partners is our main asset and the fuel on which we rely to power the growth of our business.',
+  },
+];
