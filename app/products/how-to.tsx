@@ -2,6 +2,7 @@
 import { Typography } from '@/components/ui/typography';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 export default function HowTo() {
   return (
@@ -29,7 +30,7 @@ export default function HowTo() {
         ))}
       </div>
       <div className='grid grid-cols-1 gap-px mt-20 lg:grid-cols-3 md:grid-cols-2'>
-        {extra.map((_) => {
+        {extra.map((_, idx) => {
           if (_.image)
             return (
               <Image
@@ -43,7 +44,10 @@ export default function HowTo() {
           return (
             <div
               key={_.label}
-              className='flex flex-col items-center justify-center px-10 py-3 text-center text-white bg-primary'
+              className={cn(
+                'flex flex-col items-center justify-center px-10 py-3 text-center text-white bg-primary',
+                { 'bg-[#606060]': idx === 1 }
+              )}
             >
               <h1 className='text-2xl'>{_.label}</h1>
               <Typography sm>{_.text}</Typography>
