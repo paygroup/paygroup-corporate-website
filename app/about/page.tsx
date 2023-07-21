@@ -17,19 +17,36 @@ export default function Page() {
         It was founded in 2018 by Esenda Obey, Constant Kabwasa Jr. and Raoul
         Onyambuhuto.
       </Typography>
-      <div className='grid-cols-1 md:grid-cols-2'>
+      <div className='grid-cols-1 md:grid-cols-2 md:p-20'>
         {data.map((_, idx) => (
-          <div key={_.label} className='grid grid-cols-1 md:grid-cols-2'>
+          <div
+            key={_.label}
+            className={cn(
+              'grid items-center grid-cols-1 md:pr-10 justify-items-center md:grid-cols-2',
+              { 'md:pl-10': idx }
+            )}
+          >
             <div>
               <Image src={_.icon} alt='' width={40} height={40} />
               <Typography
-                className={cn('text-secondary', { 'text-primary': !idx })}
+                lg
+                className={cn('text-secondary mt-3 mb-6', {
+                  'text-primary': !idx,
+                })}
               >
                 {_.label}
               </Typography>
-              <Typography sm>{_.text}</Typography>
+              <Typography>{_.text}</Typography>
             </div>
-            <Image src={_.iamge} alt='' width={500} height={500} />
+            <Image
+              src={_.iamge}
+              alt=''
+              className={cn('object-cover w-full h-full', {
+                'order-first': idx,
+              })}
+              width={500}
+              height={500}
+            />
           </div>
         ))}
       </div>
