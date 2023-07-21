@@ -64,7 +64,9 @@ export default function HowTo() {
       <div className='grid grid-cols-1 gap-px mt-20 lg:grid-cols-3 md:grid-cols-2'>
         {user.map((_, idx) => (
           <div key={_.text}>
-            <Image src={_.image} alt='' width={300} height={300} />
+            <div className='rounded-full w-fit ring-4 ring-primary ring-offset-8'>
+              <Image src={_.image} alt='' width={300} height={300} />
+            </div>
           </div>
         ))}
       </div>
