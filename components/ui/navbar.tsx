@@ -4,11 +4,15 @@ import { AlignJustify, X } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import Brand from './brand';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <section>
+    <motion.section
+      initial={{ y: -200, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+    >
       <nav className='container flex items-center justify-between py-3'>
         <Brand />
         <NavContent />
@@ -27,7 +31,7 @@ export default function Navbar() {
         )}
       </nav>
       {isMenuOpen && <NavContentMob setIsMenuOpen={setIsMenuOpen} />}
-    </section>
+    </motion.section>
   );
 }
 

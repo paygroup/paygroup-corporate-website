@@ -52,7 +52,7 @@
     @apply bg-primary/70;
   }
   * {
-    @apply border-border ring-border;
+    @apply border-border ring-border selection:bg-primary selection:text-white;
   }
   html {
     --scroll-behavior: smooth !important;
@@ -64,4 +64,18 @@
   }
 }
 
-@layer;
+@layer utilities {
+  /* any thing inside will be dark */
+  .overlay {
+    position: relative;
+  }
+
+  .overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    @apply bg-gradient-to-t from-primary/80 to-transparent;
+  }
+}
