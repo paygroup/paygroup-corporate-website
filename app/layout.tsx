@@ -1,5 +1,7 @@
+import Navbar from '@/components/ui/navbar';
 import './globals.css';
 import { Inter } from 'next/font/google';
+import Image from 'next/image';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -18,7 +20,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} ${inter.variable}`}>{children}</body>
+      <body className={`${inter.className} ${inter.variable}`}>
+        <Image
+          className='fixed inset-0 m-auto -z-50'
+          src={`/assets/images/bg-logo.png`}
+          alt=''
+          width={300}
+          height={500}
+        />
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
