@@ -10,7 +10,7 @@ export default function HowTo() {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[10%] pt-20'>
         {data.map((_) => (
           <div key={_.text}>
-            <Image src={_.image} alt='' width={100} height={100} />
+            <Image src={_.image} alt='' width={300} height={500} />
           </div>
         ))}
       </div>
@@ -20,14 +20,14 @@ export default function HowTo() {
 const data = [
   {
     text: 'Download mobile app Create your account',
-    image: '/public/assets/images/product-page/1.png',
+    image: '/assets/images/product-page/1.png',
   },
   {
     text: 'Search for available public campaigns',
-    image: '/public/assets/images/product-page/1.png',
+    image: '/assets/images/product-page/2.png',
   },
   {
     text: 'Select a campaign you want to support OR Create your own paygroup ',
-    image: '/public/assets/images/product-page/1.png',
+    image: '/assets/images/product-page/3.png',
   },
 ];
