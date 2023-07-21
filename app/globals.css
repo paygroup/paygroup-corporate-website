@@ -78,4 +78,10 @@
     height: 100%;
     @apply bg-gradient-to-t from-primary/80 to-transparent;
   }
+  .person--primary {
+    background: linear-gradient(to top, #633fc6 50%, white 50%);
+  }
+  .person--secondary {
+    background: linear-gradient(to top, #606060 50%, white 50%);
+  }
 }

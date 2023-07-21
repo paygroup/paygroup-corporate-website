@@ -15,7 +15,7 @@ export const data = [
 
 export const persons = [
   {
-    image: '/public/assets/images/about-us/person1.png',
+    image: '/assets/images/about-us/person1.png',
     name: 'Esenda Obey',
     desc: [
       'Co-founder (based in Dublin, Ireland)',
@@ -24,7 +24,7 @@ export const persons = [
     ],
   },
   {
-    image: '/public/assets/images/about-us/person2.png',
+    image: '/assets/images/about-us/person2.png',
     name: 'Raoul Onyambuhuto',
     desc: [
       'Co-founder (based in Kinshasa, DRC)',
@@ -34,7 +34,7 @@ export const persons = [
     ],
   },
   {
-    image: '/public/assets/images/about-us/person3.png',
+    image: '/assets/images/about-us/person3.png',
     name: 'Constant Eddy Kabwasa ',
     desc: [
       'Co-founder (based in Washington DC, USA)',
