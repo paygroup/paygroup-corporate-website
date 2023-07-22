@@ -1,14 +1,20 @@
+'use client';
 import { Typography } from '@/components/ui/typography';
-import { data } from './data';
-import Image from 'next/image';
-import { cn } from '@/lib/utils';
-import Team from './team';
 import Cultures from './cultures';
+import { motion } from 'framer-motion';
+import Team from './team';
 import Vision from './vision';
+import { variants } from '@/lib/motion-variants';
 
 export default function Page() {
   return (
-    <section className='container py-20 text-black'>
+    <motion.section
+      variants={variants}
+      initial='initialPage'
+      animate='animatePage'
+      exit='exitPage'
+      className='container py-20 text-black'
+    >
       <Typography>
         <span className='text-primary'>PayGroup</span> is a product developed by
         T-Cube Africa s.a.r.l., a company registered in the Democratic Republic
@@ -23,6 +29,6 @@ export default function Page() {
       <Vision />
       <Team />
       <Cultures />
-    </section>
+    </motion.section>
   );
 }

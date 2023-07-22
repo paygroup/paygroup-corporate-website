@@ -1,8 +1,9 @@
 import Navbar from '@/components/ui/navbar';
-import './globals.css';
+import Presence from '@/context/presence';
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import Footer from './footer';
+import './globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -30,7 +31,7 @@ export default function RootLayout({
           height={500}
         />
         <Navbar />
-        {children}
+        <Presence>{children}</Presence>
         <Footer />
       </body>
     </html>
