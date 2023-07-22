@@ -15,3 +15,30 @@ export default function Footer() {
     </section>
   );
 }
+
+const data = [
+  {
+    label: 'home',
+    href: '/',
+  },
+  {
+    label: 'about us',
+    href: '/about',
+  },
+  {
+    label: 'contact us',
+    href: '/contact',
+  },
+  {
+    label: 'terms & condition of service',
+    href: '/',
+  },
+  {
+    label: 'Confidentiality Policy ',
+    href: '/',
+  },
+  {
+    label: 'FAQ',
+    href: '/',
+  },
+];
