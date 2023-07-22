@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Next | SohanEmon',
+  title: 'Paygroup',
 };
 
 export default function RootLayout({
