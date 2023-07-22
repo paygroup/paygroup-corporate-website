@@ -3,6 +3,7 @@
 import { AlignJustify, X } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Brand from './brand';
 import { motion } from 'framer-motion';
 
@@ -36,13 +37,21 @@ export default function Navbar() {
 }
 
 const NavContent = () => {
+  const path = usePathname();
   return (
     <>
       <ul className='flex items-center gap-4 max-lg:hidden '>
         {nav.map((_) => (
           <li key={_.name}>
-            <h3 className='capitalize hover:text-primary '>
+            <h3 className='relative capitalize hover:text-primary'>
               <Link href={_.href}>{_.name}</Link>
+              {((path === '/' && _.name === 'home') ||
+                (path.includes(_.href) && _.name !== 'home')) && (
+                <motion.span
+                  layoutId='underline'
+                  className='block w-full h-0.5 rounded-full bg-gradient-to-r from-primary to-transparent'
+                />
+              )}
             </h3>
           </li>
         ))}
