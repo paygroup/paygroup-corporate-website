@@ -34,16 +34,25 @@ export default function HowTo() {
         {extra.map((_, idx) => {
           if (_.image)
             return (
-              <Image
-                src={_.image}
-                alt=''
-                className='object-cover w-full h-full'
-                width={200}
-                height={100}
-              />
+              <motion.div
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ duration: 0.4, delay: 0.3 * idx }}
+                viewport={{ once: true }}
+              >
+                <Image
+                  src={_.image}
+                  alt=''
+                  className='object-cover w-full h-full'
+                  width={200}
+                  height={100}
+                />
+              </motion.div>
             );
           return (
-            <div
+            <motion.div
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.4, delay: 0.3 * idx }}
+              viewport={{ once: true }}
               key={_.label}
               className={cn(
                 'flex flex-col items-center justify-center px-10 py-3 text-center text-white bg-primary',
@@ -54,7 +63,7 @@ export default function HowTo() {
               <Typography sm>{_.text}</Typography>
               <br />
               <Typography sm>{_.caption}</Typography>
-            </div>
+            </motion.div>
           );
         })}
       </div>
@@ -78,7 +87,10 @@ export default function HowTo() {
                   )}
                 ></div>
               </div>
-              <div
+              <motion.div
+                whileInView={{ y: [-100, 0] }}
+                transition={{ duration: 0.4, delay: 0.3 * idx }}
+                viewport={{ once: true }}
                 className={cn(
                   'absolute inset-x-0 flex flex-col items-center w-[60%] pt-32 mx-auto top-2/3 bg-gradient-to-b from-primary/60 to-transparent',
                   { 'from-secondary/60': idx === 1 }
@@ -86,7 +98,7 @@ export default function HowTo() {
               >
                 <h1 className='text-5xl text-white/20 '>0{idx + 1}</h1>
                 <p className='w-[180%] text-center pb-20 pt-5'>{_.text}</p>
-              </div>
+              </motion.div>
               <Image
                 src={_.image}
                 alt=''
