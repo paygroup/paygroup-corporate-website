@@ -1,10 +1,16 @@
+'use client';
 import { Typography } from '@/components/ui/typography';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export default function Hero() {
   return (
     <section className='container grid items-center grid-cols-1 lg:py-20 md:grid-cols-2 justify-items-center'>
-      <div className='max-md:order-last max-md:text-justify'>
+      <motion.div
+        initial={{ x: -500, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        className='max-md:order-last max-md:text-justify'
+      >
         <Typography lg>
           <span className='text-3xl md:text-5xl text-primary'>PayGroup</span> is
           a digital platform that enables <strong>social groups</strong> living
@@ -15,8 +21,18 @@ export default function Hero() {
 
           <li>Create fundraising campaigns</li>
         </Typography>
-      </div>
-      <Image src={`/assets/images/phone.png`} alt='' width={400} height={500} />
+      </motion.div>
+      <motion.div
+        initial={{ x: 500, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+      >
+        <Image
+          src={`/assets/images/phone.png`}
+          alt=''
+          width={400}
+          height={500}
+        />
+      </motion.div>
     </section>
   );
 }
