@@ -1,9 +1,17 @@
+'use client';
 import { Typography } from '@/components/ui/typography';
 import HowTo from './how-to';
+import { motion } from 'framer-motion';
+import { variants } from '@/lib/motion-variants';
 
 export default function Page() {
   return (
-    <main>
+    <motion.main
+      variants={variants}
+      initial='initialPage'
+      animate='animatePage'
+      exit='exitPage'
+    >
       <section className='container py-20'>
         <Typography center lg className='text-primary '>
           <span className='text-3xl md:text-5xl'>PAYGROUP</span> enables you to
@@ -25,6 +33,6 @@ export default function Page() {
         </div>
       </section>
       <HowTo />
-    </main>
+    </motion.main>
   );
 }

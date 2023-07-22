@@ -5,11 +5,14 @@ export const variants: Variants = {
   closed: { opacity: 0, x: '-100%' },
   initialPage: {
     x: -500,
+    opacity: 0,
   },
   animatePage: {
     x: 0,
+    opacity: 1,
   },
   exitPage: {
     x: 500,
+    opacity: 0,
   },
 };
