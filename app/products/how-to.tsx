@@ -61,7 +61,7 @@ export default function HowTo() {
       <Typography center lg className='mt-20 text-primary'>
         WHO CAN USE PAYGROUP?
       </Typography>
-      <div className='grid grid-cols-1 mt-20 gap-x-10 gap-y-72 lg:grid-cols-3 md:grid-cols-2 justify-items-center'>
+      <div className='grid grid-cols-1 mt-20 mb-48 gap-x-10 gap-y-72 lg:grid-cols-3 md:grid-cols-2 justify-items-center'>
         {user.map((_, idx) => (
           <div key={_.text}>
             <div
