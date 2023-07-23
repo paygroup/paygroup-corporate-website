@@ -16,7 +16,7 @@ export default function Details() {
           you{' '}
         </Typography>
         <div />
-        <button className='px-4 py-2 mx-auto transition-all rounded-lg text-primary col-span-full hover:bg-primary/20 w-fit'>
+        <button className='px-4 py-2 mx-auto transition-all rounded-lg text-primary col-span-full ring-primary ring-1 hover:bg-primary/30 bg-primary/20 w-fit'>
           Download Now
         </button>
       </div>
