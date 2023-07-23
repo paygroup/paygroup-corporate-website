@@ -2,11 +2,11 @@ import { Typography } from '@/components/ui/typography';
 
 export default function Details() {
   return (
-    <section className='container py-20'>
+    <section className='container py-10'>
       <Typography center lg className='text-primary '>
         With your friends & relatives
       </Typography>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-[20%] pt-20'>
+      <div className='grid grid-cols-1 pt-5 md:grid-cols-2 gap-x-20'>
         <Typography>
           <span className='text-primary'>Collect and manage</span> contributions
           to do things together

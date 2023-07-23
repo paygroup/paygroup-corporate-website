@@ -9,7 +9,7 @@ export default function Hero() {
       <motion.div
         initial={{ x: -500, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        className='max-md:order-last max-md:text-justify'
+        className='max-md:order-last'
       >
         <Typography lg>
           <span className='text-3xl md:text-5xl text-primary'>
