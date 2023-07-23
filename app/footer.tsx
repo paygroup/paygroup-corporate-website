@@ -4,8 +4,8 @@ import Social from './social';
 
 export default function Footer() {
   return (
-    <section className='bg-secondary/30'>
-      <div className='container flex flex-wrap justify-between gap-10 px-3 pt-20 pb-10 mt-32 text-neutral-800'>
+    <section className='bg-[#f3e8ff] text-neutral-800'>
+      <div className='container flex flex-wrap justify-between gap-10 px-3 pt-20 pb-10 mt-32 '>
         <div className='space-y-4'>
           <Brand />
           <p className=' text-[14px] font-normal leading-snug'>
