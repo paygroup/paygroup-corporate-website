@@ -11,13 +11,11 @@ export default function Details() {
           <span className='text-primary'>Collect and manage</span> contributions
           to do things together
         </Typography>{' '}
-        <div />
-        <div />
         <Typography>
-          {' '}
           <span className='text-primary'>Support causes</span> that are dear to
           you{' '}
         </Typography>
+        <div />
         <button className='px-4 py-2 mx-auto transition-all rounded-lg text-primary col-span-full hover:bg-primary/20 w-fit'>
           Download Now
         </button>

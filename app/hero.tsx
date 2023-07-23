@@ -12,9 +12,11 @@ export default function Hero() {
         className='max-md:order-last max-md:text-justify'
       >
         <Typography lg>
-          <span className='text-3xl md:text-5xl text-primary'>PayGroup</span> is
-          a digital platform that enables <strong>social groups</strong> living
-          in different countries, continents to:{' '}
+          <span className='text-3xl md:text-5xl text-primary'>
+            <b>Pay</b>Group
+          </span>{' '}
+          is a digital platform that enables <strong>social groups</strong>{' '}
+          living in different countries, continents to:{' '}
         </Typography>
         <Typography className='mt-10 ml-2 list-disc list-inside'>
           <li>Collect and manage contributions electronically </li>
