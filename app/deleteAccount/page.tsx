@@ -31,7 +31,15 @@ const Page: React.FC = ({}) => {
               {"John Doe"}
             </p>
           </div>
-          <div>hello chris</div>
+          <div>
+            <h3 className="text-2xl font-bold">Delete account</h3>
+            <p className="">Your account will be permanently deleted</p>
+            <div className="flex  pt-10">
+              <button className="px-4 py-2 mx-2 transition-all rounded-lg text-white hover:text-slate-950 ring-primary ring-2 hover:bg-transparent bg-primary w-fit">
+                Delete Account
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </motion.main>
