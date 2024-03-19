@@ -12,7 +12,8 @@ const Page: React.FC = ({}) => {
       exit="exitPage"
     >
       <section className="container py-20">
-        <h1>Delete</h1>
+        <h1 className="text-3xl font-bold text-primary">Delete Account</h1>
+        <h4 className="text-lg text-red-500">Dangerous action</h4>
       </section>
     </motion.main>
   );
