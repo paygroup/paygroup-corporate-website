@@ -1,9 +1,12 @@
+"use client";
+
 import React from "react";
 import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
+import { genql } from "@/graphql/genql";
 
-const Popup: React.FC<{
+export const Popup: React.FC<{
   isOpen: boolean;
   setOpen: (value: boolean) => void;
 }> = ({ isOpen, setOpen }) => {
@@ -90,5 +93,3 @@ const Popup: React.FC<{
     </Transition.Root>
   );
 };
-
-export default Popup;

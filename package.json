@@ -6,9 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "genql:remote": "genql --endpoint https://bmdbddnpdxtdkhwpteju.hasura.eu-central-1.nhost.run/v1/graphql --output ./graphql/genql-sdk -H 'X-Hasura-Admin-Secret:32f6eb94c995ee3bf6d82672b53fb2a5'"
   },
   "dependencies": {
+    "@genql/cli": "^6.3.2",
+    "@genql/runtime": "^2.10.0",
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "@types/node": "20.4.2",
