@@ -11,14 +11,14 @@ const Page: React.FC = () => {
     deleteLink: "/deleteAccount",
   };
 
-  genql.mutation({
-    deleteUser: {
-      __args: {
-        id: "",
-      },
-      id: true,
-    },
-  });
+  // genql.mutation({
+  //   deleteUser: {
+  //     __args: {
+  //       id: "",
+  //     },
+  //     id: true,
+  //   },
+  // });
 
   return <PageContent user={user} />;
 };
