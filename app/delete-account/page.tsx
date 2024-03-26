@@ -1,14 +1,9 @@
 // "use client"; // classic server side rendering
 import React from "react";
-import { motion } from "framer-motion";
-import { variants } from "@/lib/motion-variants";
-import Image from "next/image";
-import { Popup } from "@/components/ui/popup";
 import { PageContent } from "./page.content";
 import { genql } from "@/graphql/genql";
 
 const Page: React.FC = () => {
-
   const user = {
     name: "John Doe",
     profilLink:
@@ -19,15 +14,13 @@ const Page: React.FC = () => {
   genql.mutation({
     deleteUser: {
       __args: {
-        id: ""
+        id: "",
       },
       id: true,
-    }
-  })
-  
-  return (
-    <PageContent user={user} />
-  );
+    },
+  });
+
+  return <PageContent user={user} />;
 };
 
 export default Page;
