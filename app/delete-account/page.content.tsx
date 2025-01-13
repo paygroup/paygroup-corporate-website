@@ -9,7 +9,7 @@ import { User } from "./types";
 
 // testable
 export const PageContent: React.FC<{
-    user: User;
+    user?: User;
 }> = ({ user }) => {
     const [ isPopupOpen, setIsPopOpen ] = useState(false);
 
@@ -32,14 +32,14 @@ export const PageContent: React.FC<{
           <div className="sm:flex my-10 px-6 py-8 border-2 border-red-500 rounded-lg">
             <div className="sm:w-1/3 grid place-items-center w-full">
               <Image
-                src={user.profilLink}
+                src={user?.profilLink ?? ""}
                 width={200}
                 height={200}
                 alt="Avatar user"
                 className="rounded-full "
               />
               <p className="text-lg font-bold text-center w-full py-5">
-                {user.name}
+                {user?.name ?? ""}
               </p>
             </div>
             <div className="max-sm:text-center">

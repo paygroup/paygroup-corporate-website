@@ -1,0 +1,5 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target" : { "namespace": "android_app", "package_name": "com.seyaobey.paygroup.app",
+                 "sha256_cert_fingerprints": ["E9:CD:6B:E4:79:45:AB:8B:C9:AF:51:12:69:99:62:8F:93:A0:09:72:19:F7:78:DE:30:C2:22:34:2E:95:BA:00"] }
+  }]
